@@ -13,6 +13,10 @@ pytube == 11.0.1
 
 ## Start
 
+### python
+code -> Download zip -> python main.py
+
+### exe file
 Download **dist** dict，execute **main.exe**  
 
 Input youtube url and click **搜尋** button
@@ -20,6 +24,7 @@ Input youtube url and click **搜尋** button
 If you want to download video select **影片** or you want download only audio files just select **音樂**
 
 and click **下載** ， wait a few seconds ， Your video will be downloaded to the same directory as main.exe
+
 ## demo
 
 ### 程式畫面
