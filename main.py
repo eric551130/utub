@@ -19,18 +19,6 @@ def resize(w_box, h_box, pil_image):
   height = int(h*factor)
   return pil_image.resize((width, height), Image.ANTIALIAS)
 
-'''
-yt = YouTube('https://www.youtube.com/watch?v=8tuzFSXeKI0', on_progress_callback=on_progress)
-print(yt.title)
-
-stream = yt.streams
-#for st in yt.streams.filter(progressive=True):
-#    print(st)
-#print(yt.streams.first())
-stream = yt.streams.get_by_itag(22)
-#print(stream.filesize)
-stream.download()'''
-
 """ GUI """
 yt = None
 photo = None
@@ -47,7 +35,7 @@ def search():
     data_stream = io.BytesIO(image_bytes)
     image = Image.open(data_stream)
 
-    image = resize(512, 512, image)
+    image = resize(600, 600, image)
     image = ImageTk.PhotoImage(image)
 
     label_img.configure(image=image)
@@ -121,18 +109,7 @@ close_bt = tk.Button(window, text='關閉', font=('微軟正黑體', 18), width=
 r1 = tk.Radiobutton(window, text='影片', font=('微軟正黑體', 18), variable=choice, value='video', bg='Thistle')
 r2 = tk.Radiobutton(window, text='音樂', font=('微軟正黑體', 18), variable=choice, value='music', bg='Thistle')
 
-
-def show():
-    for i in range(100):
-        # 每次更新加1
-        progressbarOne['value'] = i + 1
-        # 更新画面
-        window.update()
-        time.sleep(0.05)
-
 progressbarOne = tkinter.ttk.Progressbar(window, length=350)
 
-#progressbarOne['maximum'] = 100
-#progressbarOne['value'] = 0
 
 window.mainloop()
